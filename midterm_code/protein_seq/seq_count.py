@@ -20,7 +20,7 @@ from Bio import SeqIO
 def get_args():
     """get command-line arguments"""
     parser = argparse.ArgumentParser(
-        description='Seperate FASTQ sequences',
+        description='Seperate FASTA sequences',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument(
@@ -89,14 +89,14 @@ def main():
 
             #make low_gc outstring file path
             names = os.path.splitext(basename)
-            low_str = names[0] + '_low' + names[1]
+            low_str = names[0] + names[1]
             low_file_path = os.path.join(outdir_arg, low_str)
             low_fh = open(low_file_path, 'wt')
 
 
             #print(file)
             with open(file) as f:
-                for rec in SeqIO.parse(f, "fastq"):
+                for rec in SeqIO.parse(f, "fasta"):
                     num_seq += 1
 
                     SeqIO.write(rec, low_fh, "fasta")
