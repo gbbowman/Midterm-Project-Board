@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Author : kblumberg
-Date   : 2019-02-23
-Purpose: Rock the Casbah
+Date   : 2019-10-29
+Purpose: Prepare protein fasta sequences to benchmark applictions running Blast
 """
 
 import argparse
@@ -13,7 +13,7 @@ from Bio import SeqIO
 
 
 """
-./seq_count.py Et1.fastq.1 -p 2
+./seq_count.py protein.fasta --int 100 --outdir protein_Test5
 """
 
 # --------------------------------------------------
@@ -87,7 +87,7 @@ def main():
             basename = os.path.basename(file)
             #print(basename)
 
-            #make low_gc outstring file path
+            #make outstring file path
             names = os.path.splitext(basename)
             low_str = names[0] + names[1]
             low_file_path = os.path.join(outdir_arg, low_str)
