@@ -5,7 +5,7 @@
 # available from https://www.uniprot.org/uniprot/?query=proteome:UP000005640
 # which was found from https://www.uniprot.org/help/reference_proteome
 
-./seq_count.py uniprot-proteome%3AUP000005640.fasta --int 1 --outdir protein_Test1
-./seq_count.py uniprot-proteome%3AUP000005640.fasta --int 5 --outdir protein_Test2
-./seq_count.py uniprot-proteome%3AUP000005640.fasta --int 50 --outdir protein_Test4
-./seq_count.py uniprot-proteome%3AUP000005640.fasta --int 100 --outdir protein_Test5
+./seq_count.py protein.fasta --int 1 --outdir protein_Test1
+./seq_count.py protein.fasta --int 5 --outdir protein_Test2
+./seq_count.py protein.fasta --int 50 --outdir protein_Test4
+./seq_count.py protein.fasta --int 100 --outdir protein_Test5
