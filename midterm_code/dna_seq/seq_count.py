@@ -2,7 +2,7 @@
 """
 Author : kblumberg
 Date   : 2019-02-23
-Purpose: Rock the Casbah
+Purpose: Prepare DNA fasta sequences to benchmark applictions running Blast
 """
 
 import argparse
@@ -87,9 +87,9 @@ def main():
             basename = os.path.basename(file)
             #print(basename)
 
-            #make low_gc outstring file path
+            #make outstring file path
             names = os.path.splitext(basename)
-            low_str = names[0] + '_low' + names[1]
+            low_str = names[0] + names[1]
             low_file_path = os.path.join(outdir_arg, low_str)
             low_fh = open(low_file_path, 'wt')
 
