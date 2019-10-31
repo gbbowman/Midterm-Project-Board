@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Author : kblumberg
-Date   : 2019-02-23
+Date   : 2019-10-29
 Purpose: Prepare DNA fasta sequences to benchmark applictions running Blast
 """
 
@@ -13,7 +13,7 @@ from Bio import SeqIO
 
 
 """
-./seq_count.py Et1.fastq.1 -p 2
+./seq_count.py dna.fasta --int 1235 --outdir DNA_Test5
 """
 
 # --------------------------------------------------
